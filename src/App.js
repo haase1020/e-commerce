@@ -2,20 +2,37 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Navbar, Sidebar, Footer } from "./components";
 
-import {
-  Home,
-  SingleProduct,
-  Cart,
-  // Checkout,
-  Error,
-  About,
-  Products,
-  // PrivateRoute,
-} from "./pages";
+import styled from "styled-components";
+
+const Button = styled.button`
+  background: blue;
+  color: white;
+`;
+
+const Container = styled.div`
+  background: yellow;
+  color: white;
+`;
+// import {
+//   Home,
+//   SingleProduct,
+//   Cart,
+//   // Checkout,
+//   Error,
+//   About,
+//   Products,
+//   // PrivateRoute,
+// } from "./pages";
 
 function App() {
   return (
-    <h1>Hello world</h1>
+    <div>
+      <Container>
+        <div>Hello</div>
+      </Container>
+      <Button>Click me</Button>
+    </div>
+
     // <Router>
     //   <Navbar />
     //   <Sidebar />
