@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <Wrapper>
       <div className="section-center">
-        <h3>Join our newsletter and get 20% off</h3>
+        <h3>Join the newsletter and get 20% off</h3>
         <div className="content">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
@@ -13,14 +13,15 @@ const Contact = () => {
             vero?
           </p>
           <form
+            //formspree.io is a great starting spot
             className="contact-form"
-            action="your form spree id"
+            action="https://formspree.io/f/xnqooegk"
             method="POST"
           >
             <input
               type="email"
               className="form-input"
-              placeholder="enter email"
+              placeholder="your email"
               name="_replyto"
             />
             <button type="submit" className="submit-btn">

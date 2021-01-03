@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { PageHero } from "../components";
-import aboutImg from "../assets/hero-bcg.jpeg";
+import aboutImg from "../assets/hero.jpg";
 
 const AboutPage = () => {
   return (
@@ -32,7 +32,7 @@ const Wrapper = styled.section`
   display: grid;
   gap: 4rem;
   img {
-    width: 100%;
+    width: 90%;
     display: block;
     border-radius: var(--radius);
     height: 500px;

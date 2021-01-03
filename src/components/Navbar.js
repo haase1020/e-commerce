@@ -44,8 +44,9 @@ const Nav = () => {
 };
 
 const NavContainer = styled.nav`
-  height: 5rem;
+  height: 9rem;
   display: flex;
+  padding-bottom: 2rem;
 
   align-items: center;
   justify-content: center;

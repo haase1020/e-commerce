@@ -9,15 +9,15 @@ const Hero = () => {
     <Wrapper className="section-center">
       <article className="content">
         <h1>
-          Find the Joy <br />
-          of learning again
+          Fitness <br />
+          for Programmers
         </h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti iure
           quasi odit tenetur unde officiis repudiandae quod deserunt quia eum?
         </p>
         <Link to="/products" className="btn hero-btn">
-          shop now
+          Learn more
         </Link>
       </article>
       <article className="img-container">
