@@ -15,13 +15,16 @@ const AboutPage = () => {
             <div className="underline"></div>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-            quaerat, modi doloremque necessitatibus eum dolor nesciunt delectus,
-            voluptate blanditiis, obcaecati beatae ab aut ipsa consequuntur
-            tempora cumque. Ut quo enim vero odio minus nostrum eveniet,
-            doloribus veritatis dolorem unde ipsum, voluptatibus totam.
-            Explicabo, quas libero! Laborum incidunt minima consequatur ratione?
+            Welcome to the Hopeful Programmer! This website is the culmination
+            of some of my brainchilds over the past few years. I am excited to
+            share my lessons learned about minimalism, physical health, mental
+            health, and living a purposeful, meaningful life...at least what I
+            have learned that helps me do so. Hope definition (Webster's
+            Collegiate Dictionary): to cherish a desire with expectation of
+            fulfillment.{" "}
           </p>
+          <p>Perfect.</p>
+          <p>Let's be hopeful. Let's go after hope.</p>
         </article>
       </Wrapper>
     </main>

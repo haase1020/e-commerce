@@ -16,7 +16,7 @@ const initialState = {
   filtered_products: [],
   all_products: [],
   grid_view: true,
-  sort: "price-lowest",
+  sort: "price-highest",
   filters: {
     text: "",
     company: "all",
