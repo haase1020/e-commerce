@@ -14,17 +14,6 @@ import {
 
 import styled from "styled-components";
 
-// import {
-//   Home,
-//   SingleProduct,
-//   Cart,
-//   // Checkout,
-//   Error,
-//   About,
-//   Products,
-//   // PrivateRoute,
-// } from "./pages";
-
 function App() {
   return (
     <Router>
@@ -44,9 +33,9 @@ function App() {
           <Products />
         </Route>
         <Route exact path="/products/:id" children={<SingleProduct />} />
-        <Route exact path="/checkout">
+        <PrivateRoute exact path="/checkout">
           <Checkout />
-        </Route>
+        </PrivateRoute>
         <Route path="*">
           <Error />
         </Route>

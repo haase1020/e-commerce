@@ -2,27 +2,28 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import heroBcg from "../assets/joylearnhero.jpg";
-// import heroBcg2 from "../assets/hero-bcg-2.jpeg";
+import heroBcg2 from "../assets/ai.jpg";
 
 const Hero = () => {
   return (
     <Wrapper className="section-center">
       <article className="content">
         <h1>
-          Fitness <br />
-          for Programmers
+          Learning <br />
+          that Inspires Hope
         </h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti iure
-          quasi odit tenetur unde officiis repudiandae quod deserunt quia eum?
-        </p>
+        <p>Discover the hope that comes from joyful, passionate learning.</p>
         <Link to="/products" className="btn hero-btn">
           Learn more
         </Link>
       </article>
       <article className="img-container">
         <img src={heroBcg} alt="nice table" className="main-img" />
-        {/* <img src={heroBcg2} alt="person working" className="accent-img" /> */}
+        <img
+          src={heroBcg2}
+          alt="kanji for love in Japanese"
+          className="accent-img"
+        />
       </article>
     </Wrapper>
   );
@@ -79,9 +80,9 @@ const Wrapper = styled.section`
     .img-container::before {
       content: "";
       position: absolute;
-      width: 10%;
+      width: 50%;
       height: 80%;
-      background: var(--clr-primary-9);
+      // background: var(--clr-primary-9);
       bottom: 0%;
       left: -8%;
       border-radius: var(--radius);
