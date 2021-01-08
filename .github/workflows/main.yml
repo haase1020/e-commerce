@@ -23,19 +23,19 @@ jobs:
       steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Setup Cypress
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
         with:
           start: npm start
-          wait-on:  'http://localhost:3000' 
+          wait-on:  'http://localhost:3000'
+          post-steps: 
+            -report-coverage
       - name: Upload Reports
-     
-        uses: codecov/codecov-action@v2
-        with:
-            
-            flags: unittests # optional
-            name: codecov-umbrella # optional
-            fail_ci_if_error: true # optional (default = false)
-            verbose: true # optional (default = false):  
+        uses: codecov/codecov-action@v1
+        with: 
+          flags: unittests # optional
+          name: codecov-umbrella # optional
+          fail_ci_if_error: true # optional (default = false)
+          verbose: true # optional (default = false):  
 
 
         
