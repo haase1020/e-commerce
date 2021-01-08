@@ -2,13 +2,13 @@
 
 name: CI
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -16,28 +16,32 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-    cypress-run: 
-      runs-on: ubuntu-latest
+  cypress-run:
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
-      steps:
+    steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Setup Cypress
         uses: actions/checkout@v2
         with:
+          fetch-depth: 2
+      - name: Cypress run
+        uses: cypress-io/github-action@v1
+        with:
           start: npm start
-          wait-on:  'http://localhost:3000'
-          post-steps: 
-            -report-coverage
+          wait-on: "http://localhost:3000"
+          post-steps: -report-coverage
+      - name: cat file
+        run: |
+          ls ./coverage
+          ls ./coverage/lcov-report
+          cat ./coverage/lcov-report/index.html
       - name: Upload Reports
         uses: codecov/codecov-action@v1
-        with: 
+        with:
           flags: unittests # optional
           name: codecov-umbrella # optional
           fail_ci_if_error: true # optional (default = false)
-          verbose: true # optional (default = false):  
+          verbose: true # optional (default = false):
 
-
-        
-
-   

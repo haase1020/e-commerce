@@ -9,6 +9,6 @@ context("Actions", () => {
 
   it("should vitist website", () => {
     // https://on.cypress.io/type
-    cy.get(".btn").should("exist");
+    cy.get(".btn").click();
   });
 });
