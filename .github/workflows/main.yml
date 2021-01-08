@@ -28,7 +28,7 @@ jobs:
           start: npm start
           wait-on:  'http://localhost:3000' 
       - name: Upload Reports
-        uses: codecov/codecov-action@v2
+        uses: codecov/codecov-action@v1
         with: 
           flags: unittests # optional
           name: codecov-umbrella # optional
